@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: simple-webapp
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: cookie
+    spec:
+      containers:
+        - name: webapp
+          image: "quay.io/coreos/example-app:v1.0"
+          ports:
+            - name: http
+              containerPort: 80
