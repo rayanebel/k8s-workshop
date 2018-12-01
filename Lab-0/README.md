@@ -33,7 +33,7 @@ Ouvrez le fichier `cloud.conf` et complétez les informations manquantes :
 
 Pour plus de détails, consultez la page suivante : https://github.com/kubernetes/cloud-provider-azure/blob/master/docs/cloud-provider-config.md
 
-Copiez ensuite ce fichier dans /etc/kubernetes
+Copiez ensuite ce fichier dans `/etc/kubernetes`
 
 Editez ensuite, le fichier `kubeadm-master.yml` et remplacer tous les champs entre `<>` avec vos valeurs. 
 
