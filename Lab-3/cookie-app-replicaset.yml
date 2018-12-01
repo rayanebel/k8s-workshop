@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: cookie-app
+  labels:
+    app: cookie
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cookie
+  template:
+    metadata:
+      labels:
+        app: cookie
+    spec:
+      containers:
+      - name: cookie-app
+        image: quay.io/coreos/example-app:v1.0
+        ports:
+        - containerPort: 80
