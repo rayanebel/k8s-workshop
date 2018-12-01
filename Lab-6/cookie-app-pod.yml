@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cookie-app-pv
+  labels:
+    app: cookie-app
+spec:
+  volumes:
+  - name: web
+    persistentVolumeClaim:
+      claimName: azure-managed-disk
+  containers:
+  - name: cookie-app
+    image: quay.io/coreos/example-app:v1.0
+    ports:
+    - containerPort: 80
+    volumeMounts:
+    - mountPath: "/opt"
+      name: web
