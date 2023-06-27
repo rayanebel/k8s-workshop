@@ -28,6 +28,7 @@ spec:
       protocol: TCP
       port: 9898
       targetPort: 9898
+  type: LoadBalancer
 EOF
 ```
 

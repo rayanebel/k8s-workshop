@@ -57,13 +57,13 @@ spec:
         - containerPort: 9898
           name: http
           protocol: TCP
-EOF 
+EOF
 ```
 
 - Open a shell in the podinfo pod and check the environment variables. Can you see the variables defined in the secrets ?
 
 ```bash
-kubectl -n podinfo exec -it <POD_NAME> bash
+kubectl -n podinfo exec -it <POD_NAME> sh
 
 $> env
 ```
@@ -109,4 +109,11 @@ spec:
         - name: secrets
           secret:
             secretName: mysecret
+EOF
+```
+
+```bash
+kubectl -n podinfo exec -it <POD_NAME> sh
+
+$> ls /etc/secrets
 ```

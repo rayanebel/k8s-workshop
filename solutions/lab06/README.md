@@ -36,8 +36,8 @@ spec:
     image: stefanprodan/podinfo:6.3.0
     ports:
     - containerPort: 9898
-        name: http
-        protocol: TCP
+      name: http
+      protocol: TCP
 EOF
 ```
 
@@ -56,10 +56,10 @@ kubectl describe pods podinfo -n podinfo
 - Open a shell inside your pod. Which command will you run?
 
 ```bash
-kubectl exec -it podinfo -n podinfo -- bash
+kubectl exec -it podinfo -n podinfo -- sh
 ```
 
-- Update the image tag from `6.3.0` to `6.4.0` and redeploy the application. What do you see?
+- Try to edit the port number from `9898` to `9899`. What do you see?
 
 ```bash
 kubectl apply -f - <<EOF
@@ -71,11 +71,11 @@ metadata:
 spec:
   containers:
   - name: podinfo
-    image: stefanprodan/podinfo:6.4.0
+    image: stefanprodan/podinfo:6.3.0
     ports:
-    - containerPort: 9898
-        name: http
-        protocol: TCP
+    - containerPort: 9899
+      name: http
+      protocol: TCP
 EOF
 ```
 
@@ -83,8 +83,8 @@ We can't perform an upgrade on a pod directly. We have to destroy and recreate t
 
 - Delete the `podinfo` pod 
 
-```bash
-kubectl delete pod podinfo
+```bashkubectl -n podinfo rollout history deployment podinfo
+kubectl -n podinfo delete pod podinfo
 ```
 
 - Delete the `podinfo` namespace
