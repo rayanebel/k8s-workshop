@@ -9,5 +9,6 @@ Learn how to work with container images.
 - List the containers images in your environment.
 - Pull the latest `stefanprodan/podinfo` image.
 - Run a container in the background named `podinfo` with the image `stefanprodan/podinfo` and bind the port `9898` to the port `9898` on your local machine.
+- Open your browser and try to access to http://localhost:9898
 - Remove the image. Did it work ?
 - Do whatever is needed in order to remove the image.

@@ -6,9 +6,10 @@ Learn how to run, stop and remove containers.
 
 ## Instructions
 
-- Run a container in the background named container01 using latest ubuntu image.
-- Run a container in the background named container02 with latest nginx image and bind the port 80 to the port 8080 on your local machine.
+- Run a container in the background named `container01` using latest `ubuntu` image.
+- Run a container in the background named `container02` with latest `nginx` image and bind the port `80` to the port `8080` on your local machine.
 - List the containers to make sure the container is running.
-- On the container01 open a terminal (bash).
+- On the `container01` open a terminal (bash).
+- Open your browser and try to access to http://localhost:8080
 - Stop the containers.
 - Remove the containers.
