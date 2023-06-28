@@ -17,6 +17,6 @@ Learn how to create a namespace and a pod.
 - Verify if your pod is running. Which command will you run?
 - Displays detailed status of your pod with `kubectl`. Which command will you run?
 - Open a shell inside your pod. Which command will you run?
-- Update the image tag from `6.3.0` to `6.4.0` and redeploy the application. What do you see?
+- Edit the pod definition and change the port number from 9898 to 9899. What do you see?
 - Delete the `podinfo` pod 
 - Delete the `podinfo` namespace

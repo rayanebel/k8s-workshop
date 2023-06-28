@@ -10,6 +10,8 @@ Learn how to create your own container image from a real application developed i
 
 The source code will be available just after. The purpose of this is to make you a demo on how to build an image for a real application. You can later train yourself with a easier example.
 
+You have a short description of what we will build in this [documentation](./README.md)
+
 - Create the Dockerfile for the application.
 - Create the container image from the Dockerfile.
 - Create a container with the image built in the previous step.
