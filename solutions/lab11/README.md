@@ -51,12 +51,13 @@ spec:
             secretName: mysecret
         - name: data
           emptyDir: {}
+EOF
 ```
 
 - Open a shell on the podinfo pod and add some data in `/etc/foo` _(e.g create a file)_.
 
 ```bash
-kubectl -n podinfo exec -it <POD_NAME> bash
+kubectl -n podinfo exec -it <POD_NAME> sh
 
 $ ls /etc/foo
 $ echo "test test test" > /etc/foo/data.txt
@@ -72,7 +73,7 @@ kubectl -n podinfo rollout restart deployment podinfo
 - Open a shell on the podinfo pod and check the content of your volume in `/etc/foo`. Is your data still present?
 
 ```bash
-kubectl -n podinfo exec -it <POD_NAME> bash
+kubectl -n podinfo exec -it <POD_NAME> sh
 
 $ ls /etc/foo
 ```

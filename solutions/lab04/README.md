@@ -8,7 +8,7 @@ Learn how to create your own container image from a real application developed i
 
 - Let’s build a small application _(live coding if time)_.
 
-The source code will be available just after. The purpose of this is to make you a demo on how to build an image for a real application. You can later train yourself with a easier example.
+The source code is available [here](./application/)
 
 - Create the Dockerfile for the application.
 
@@ -30,10 +30,13 @@ EXPOSE 3000
 
 CMD ["./blog-api"]
 ```
+
+You can retrieve the Dockerfile [here](./application/Dockerfile)
+
 - Create the container image from the Dockerfile.
 
 ```bash
-docker build -t blog-api:1.0.0 .
+docker build -t blog-api:1.0.0 -f application/Dockerfile .
 ```
 
 - Create a container with the image built in the previous step.
@@ -47,7 +50,7 @@ docker run -t -d --name blog-api -p 3000:3000 blog-api:1.0.0
 After updating some line in the codebase you can build a new version with the following command
 
 ```bash
-docker build -t blog-api:2.0.0 .
+docker build -t blog-api:2.0.0 -f application/Dockerfile .
 ```
 
 - Recreate the container with the newest image.
